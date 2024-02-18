@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            font-family:'Times New Roman', Times, serif
+
+        }
+      .box {
+        height: 20px;
+        width: 200px;
+        border-radius: 5px;
+        margin-left: 80vh;
+      }
+      .names {
+        font-size: larger;
+        color: beige;
+        margin-left: 80vh;
+      }
+      #box {
+        height: 20px;
+        width: 80px;
+        margin-left: 85vh;
+      }
+      .head{
+        font-size: xx-large;
+        color: azure;
+        margin-left: 80vh;
+        margin-top: 10vh;  
+      }
+      .head1{
+        font-size: x-large;
+        color: azure;
+        margin-left: 75vh;
+        margin-top: 5vh;  
+      }
+      #btn{
+        color: darkslateblue;
+        background-color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-left:7vh ;
+        font-size: larger;
+      }
+      #btnn{
+        color: darkslateblue;
+        background-color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-left:75vh ;
+        font-size: larger;
+      }
+    </style>
+</head>
+<body>
+    <script>
+        document.body.style.backgroundImage = "url('./register bg.jpg')";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.height = "100vh";
+      document.body.style.width = "98vw";
+
+        var divv = document.createElement("div");
+      divv.setAttribute("class", "bg");
+      document.body.appendChild(divv);
+
+      var h1= document.createElement("h1");
+      h1.className = "head"; 
+           h1.innerText= "Welcome back!";
+           document.body.appendChild(h1) 
+
+      var h6= document.createElement("h6");
+      h6.className = "head1"; 
+           h6.innerText= "Login to your existing account"; 
+           document.body.appendChild(h6) 
+
+      var form = document.createElement("form");
+      document.body.appendChild(form);
+
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+
+      var nameLabel = document.createElement("label");
+      nameLabel.setAttribute("class", "names");
+      nameLabel.textContent = "Username: ";
+      form.appendChild(nameLabel);
+
+      form.appendChild(document.createElement("br"));
+
+      var nameInput = document.createElement("input");
+      nameInput.setAttribute("class", "box");
+      nameInput.setAttribute("type", "text");
+      nameInput.setAttribute("name", "name");
+      form.appendChild(nameInput);
+
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+
+      var nameLabel = document.createElement("label");
+      nameLabel.setAttribute("class", "names");
+      nameLabel.textContent = "Email: ";
+      form.appendChild(nameLabel);
+
+      form.appendChild(document.createElement("br"));
+
+      var nameInput = document.createElement("input");
+      nameInput.setAttribute("class", "box");
+      nameInput.setAttribute("type", "text");
+      nameInput.setAttribute("name", "email");
+      form.appendChild(nameInput);
+
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+
+      var nameLabel = document.createElement("label");
+      nameLabel.setAttribute("class", "names");
+      nameLabel.textContent = "Password: ";
+      form.appendChild(nameLabel);
+
+      form.appendChild(document.createElement("br"));
+
+      var nameInput = document.createElement("input");
+      nameInput.setAttribute("class", "box");
+      nameInput.setAttribute("type", "password");
+      nameInput.setAttribute("name", "name");
+      form.appendChild(nameInput);
+
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+
+
+      var btnn=document.createElement("a");
+      btnn.innerText="Iam a new customer";
+      btnn.setAttribute("href","./signin.html");
+      btnn.setAttribute("id","btnn");
+      form.appendChild(btnn);
+
+      var btn= document.createElement("a");
+    btn.innerText = "Submit"; 
+    btn.setAttribute("href","./foodshop.html"); 
+    btn.setAttribute("id","btn");
+   form.appendChild(btn);
+
+    </script>
+</body>
+</html>

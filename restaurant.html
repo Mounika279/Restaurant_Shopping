@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <style>
+        .logo{
+            height: 100px;
+            width: 100px;
+            margin-top: 10px;
+            margin-left:30px ;
+        }
+        .marq{
+            color: white;
+            background-color: goldenrod;
+            height: 30px;
+            font-size: larger;
+        }
+        nav {
+            background-color: darkgoldenrod;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            top:-30px;
+            left:350px;
+            width:500px;
+            border-radius: 5px;
+           
+}     
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 20px;
+            
+        }
+        
+        nav a:hover {
+            text-decoration: none;
+        }
+        .img1,.img2,.img3,.img4,.img5,
+        .img6,.img7,.img8{
+            border-radius: 10px;
+            margin: 35px;
+               height: 300px;
+            width:300px;
+        }
+        
+        @keyframes moveTrain {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(100vw - 400px)); }
+        }
+        .train{
+            margin: 20px;
+            height: 250px;
+            width:300px;
+            animation: moveTrain 10s linear infinite;
+        }
+
+        #div4 {
+    border: 1px solid gold;
+    display: inline-flex; 
+    flex-direction: column; 
+    padding: 5px; 
+    border-radius: 50px;
+    margin-left:50vh; 
+    background-color:darkgoldenrod;
+}
+        h1{
+           
+            font-size: xx-large;
+            color: white;
+            font-weight:bold;
+        }
+        li{
+            font-size: x-large;
+            color: white;
+        }
+        .div5 {
+    border: 1px solid gold;
+    display: inline-flex; 
+    flex-direction: column; 
+    padding: 5px; 
+    border-radius: 50px;
+    margin-left:20vh; 
+    background-color:darkgoldenrod;
+}
+.div6 {
+    border: 1px solid gold;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 50px;
+    margin-top: 30px; 
+    margin-left: 80vh; 
+    background-color: darkgoldenrod;
+}
+#footer{
+    background-color: black;
+    color: white;
+}
+.yt,.fb,.wtsup{
+    height:50px;
+    width:50px;
+}
+.twi{
+    height:50px;
+    width:50px;
+}
+.div8{
+    margin-left:170vh;
+}
+.copy{
+    text-align: center;
+    position: relative;
+    top:80px;
+    font-size: larger;
+}
+.addr{
+    font-size: x-large;
+    margin-left: 20px;
+    
+}
+.fulladdr{
+    font-size: large;
+    margin-left: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <script>
+       var divv= document.createElement("div")
+       document.body.appendChild(divv)
+
+       var marq=document.createElement("marquee");
+        marq.setAttribute("class","marq")
+        marq.innerText = "Today's Special: Crunchy Paneer Tikka,Chicken Tikka,Murgh Masala,";
+        document.body.appendChild(marq);
+
+        var logo=document.createElement("img")
+        logo.setAttribute("class","logo")
+        logo.setAttribute("src","./restlogo.png")
+        document.body.appendChild(logo)
+
+    var nav=document.createElement("nav")
+
+    var menu=document.createElement("a")
+    menu.innerText="Home"
+    nav.appendChild(menu)
+
+    var menu=document.createElement("a")
+    menu.innerText="Menu"
+    menu.setAttribute("href","#div4")
+    nav.appendChild(menu)
+
+    var menu=document.createElement("a")
+    menu.innerText="Images"
+    menu.setAttribute("href","#div1")
+    nav.appendChild(menu)
+
+    var menu=document.createElement("a")
+    menu.innerText="Location"
+    menu.setAttribute("href","#footer")
+    nav.appendChild(menu)
+
+    
+    document.body.appendChild(nav);
+        
+    var div1=document.createElement("div")
+    div1.setAttribute("id","div1")
+    document.body.appendChild(div1)
+
+    var img1=document.createElement("img")
+    img1.setAttribute("class","img1")
+    img1.setAttribute("src","./img1.jpg")
+    div1.appendChild(img1)
+
+    var img2=document.createElement("img")
+    img2.setAttribute("class","img2")
+    img2.setAttribute("src","./img2.jpg")
+    div1.appendChild(img2)
+
+    var img3=document.createElement("img")
+    img3.setAttribute("class","img3")
+    img3.setAttribute("src","./img3.jpg")
+    div1.appendChild(img3)
+
+    var img4=document.createElement("img")
+    img4.setAttribute("class","img4")
+    img4.setAttribute("src","./img4.jpg")
+    div1.appendChild(img4)
+
+    var div2=document.createElement("div")
+    document.body.appendChild(div2)
+
+    var img5=document.createElement("img")
+    img5.setAttribute("class","img5")
+    img5.setAttribute("src","./img5.jpg")
+    div1.appendChild(img5)
+
+    var img6=document.createElement("img")
+    img6.setAttribute("class","img6")
+    img6.setAttribute("src","./img6.jpg")
+    div1.appendChild(img6)
+
+    var img7=document.createElement("img")
+    img7.setAttribute("class","img7")
+    img7.setAttribute("src","./img7.jpg")
+    div1.appendChild(img7)
+
+    var img8=document.createElement("img")
+    img8.setAttribute("class","img8")
+    img8.setAttribute("src","./img8.jpg")
+    div1.appendChild(img8)
+
+    var div3=document.createElement("div")
+    document.body.appendChild(div3)
+
+    var train=document.createElement("img")
+    train.setAttribute("class","train")
+    train.setAttribute("src","./train.png")
+    div3.appendChild(train)
+
+    var div4=document.createElement("div")
+    div4.setAttribute("id","div4")
+    document.body.appendChild(div4)
+
+    var ul1=document.createElement("ul")
+    div4.appendChild(ul1)
+
+     var h11=document.createElement("h1")
+     h11.innerText="Vegetarian"
+      ul1.appendChild(h11)
+
+    var li=document.createElement("li")
+    li.innerText="Paneer Majestic"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Babycorn Manchuria"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Paneer CheeseBall"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Crispy Corn"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Spring Rolls"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Veg biryani"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Veg Kolhapuri"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Kaju Paneer Curry"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Kadai Paneer"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Tandoori Special Paneer Biryani"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Veg Dum Biryani"
+    ul1.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Kaju Biryani"
+    ul1.appendChild(li)
+
+    var div5=document.createElement("div")
+    div5.setAttribute("class","div5")
+    document.body.appendChild(div5)
+
+    var ul2=document.createElement("ul")
+    div5.appendChild(ul2)
+
+     var h12=document.createElement("h1")
+     h12.setAttribute("class","h12")
+     h12.innerText="Non-Vegetarian"
+      ul2.appendChild(h12)
+
+    var li=document.createElement("li")
+    li.innerText="Chicken Majestic"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Chilli Chicken"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Tangdi Kebab"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Pachi Mirchi Kodi Kebab"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Fish Tikka"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Tandoori Prawns"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Rayalavari Kodi Kura"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Cashew Keema Igguru"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Platform65 Special Chicken Biryani"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Fried Mutton Biryani"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Prawns Biryani"
+    ul2.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Chitti Mutyala Mutton Pulao"
+    ul2.appendChild(li)
+
+    var div6=document.createElement("div")
+    div6.setAttribute("class","div6")
+    document.body.appendChild(div6)
+
+    var ul3=document.createElement("ul")
+    div6.appendChild(ul3)
+
+     var h12=document.createElement("h1")
+     h12.setAttribute("class","h12")
+     h12.innerText="Mocktails/Deserts/Icecreams"
+      ul3.appendChild(h12)
+
+    var li=document.createElement("li")
+    li.innerText="StrawBerry Field"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Sunrise Mocktail"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Virgin Mojito"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Blue Lagoan"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText=" Belgian Choclate Milkshake"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Oreo Milkshake"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Apple Rabadi"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Brownie with Icecream"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Triffle Pudding"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Dryfruit Malai"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Choclate Icecream"
+    ul3.appendChild(li)
+    var li=document.createElement("li")
+    li.innerText="Seethaphal Rabdi"
+    ul3.appendChild(li)
+
+    var footer=document.createElement("div")
+    footer.setAttribute("id","footer")
+    document.body.appendChild(footer)
+
+    var addr=document.createElement("h3")
+    addr.setAttribute("class","addr")
+    addr.innerText="OUR BRANCHES"
+    footer.appendChild(addr)
+
+    var fulladdr= document.createElement("p")
+    fulladdr.setAttribute("class","fulladdr")
+    fulladdr.innerText="    KPHB Hyderabad   |    Kompally Hyderabad    |    Kondapur Hyderabad   |     Dilsukhnagar Hyderabad  |   Karimnagar   |  Warangal  |     Vizianagaram   |   Vijayawada    |  Vizag    |  Bannerghatta Road Bengaluru   |"
+    footer.appendChild(fulladdr)
+
+    var copyright = document.createElement("p");
+    copyright.setAttribute("class","copy")
+copyright.innerText = "© 2024 Copyrights Mounika Inc.";
+footer.appendChild(copyright);
+
+var div8=document.createElement("div")
+div8.setAttribute("class","div8")
+footer.appendChild(div8)
+
+var connect = document.createElement("p");
+connect.innerText = "Connect with Us :";
+div8.appendChild(connect);
+
+var facebookIcon = document.createElement("img");
+facebookIcon.setAttribute("class","fb")
+facebookIcon.setAttribute("src", "./facebook.png");
+facebookIcon.setAttribute("alt", "Facebook");
+div8.appendChild(facebookIcon);
+
+var twitterIcon = document.createElement("img");
+twitterIcon.setAttribute("class","twi")
+twitterIcon.setAttribute("src", "./twitter.png");
+twitterIcon.setAttribute("alt", "twitter");
+div8.appendChild(twitterIcon);
+
+var whatsappIcon = document.createElement("img");
+whatsappIcon.setAttribute("class","wtsup")
+whatsappIcon.setAttribute("src", "./whatsapp.png");
+whatsappIcon.setAttribute("alt", "wtsup");
+div8.appendChild(whatsappIcon);
+
+var youtubeIcon = document.createElement("img");
+youtubeIcon.setAttribute("class","yt")
+youtubeIcon.setAttribute("src", "./youtube.png");
+youtubeIcon.setAttribute("alt", "youtube");
+div8.appendChild(youtubeIcon);
+
+
+
+    </script>
+</body>
+</html>
