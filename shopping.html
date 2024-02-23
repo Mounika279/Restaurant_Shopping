@@ -5,239 +5,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping</title>
     <style>
-        .nav{
-            font-size: x-large;
-            color: white;
-            display: inline-block;
-            position: relative;
-            left:400px;
-            top:-60px;
-           word-spacing: 30px;
-           height: 30px;
-           width: 400px;
-           border-radius: 2px;
-            background-color:darkslateblue ;
-
-        }
-        .nav::first-letter {
-    margin-left: 10px;
-}
-        .card {
-            border: 2px solid #ccc;
-            border-radius: 15px;
-            padding: 5px;
-            margin-left: 45px;
-            margin-right: 35px;
-            margin-top: -45px; 
-            margin-bottom: 60px;
-            width: 200px;
-            display: inline-block;
-            text-align: center;
-            height: 350px; 
-            overflow: hidden; 
-            position: relative;
-        }
-        .card img {
-            width: auto;
-            height: 200px;
-            margin-left: 16px;
-        }
-        #btn {
-            position: absolute; 
-            bottom: 10px;
-            left: 50%; 
-            transform: translateX(-50%); 
-            display: block; 
-            font-size: large;
-            width: 50px;
-            height: 20px;
-            border-radius: 3px;
-            color: black;
-            background-color: rgba(218, 165, 32, 0.848);
-            text-decoration: none;
-        }
-      .logo{
-        height:180px;
-        width:180px;
-      margin-top:-25px;
+      .nav {
+        font-size: x-large;
+        color: white;
+        display: inline-block;
+        position: relative;
+        left: 400px;
+        top: -60px;
+        word-spacing: 30px;
+        height: 30px;
+        width: 400px;
+        border-radius: 2px;
+        background-color: darkslateblue;
       }
-      .buds{
+      .nav::first-letter {
+        margin-left: 10px;
+      }
+      .card {
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 15px;
+        margin-left: 75px;
+        margin-right: 55px;
+        margin-top: -45px;
+        margin-bottom: 60px;
+        width: 200px;
+        display: inline-block;
         text-align: center;
-        padding: 10px;
-        margin-top:-420px;
+        height: 360px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card img {
+        width: auto;
+        height: 200px;
+        margin-left: 16px;
+      }
+      #btn {
+  position: relative;
+ top: 22px;
+  display: inline-block; /* Change from block to inline-block */
+  font-size: large;
+  width: 50px;
+  height: 20px;
+  border-radius: 3px;
+  color: white;
+  background-color: slateblue;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px; 
+}
+
+#btn1 {
+  position: relative;
+  top: 20px;
+  left:5px;
+  display: inline-block; /* Change from block to inline-block */
+  font-size: medium;
+  width: 80px;
+  height: 20px;
+  border-radius: 3px;
+  color: white;
+  padding:5px; 
+  background-color:slateblue;
+  text-decoration: none;
+}
+
+      .product {
+  font-weight: 300; /* Adjust the value as needed */
+}
+
+      .logo {
+        height: 180px;
+        width: 180px;
+        margin-top: -25px;
       }
       .buds {
-            text-align: center;
-            margin-top: 30px; 
-        }
-        #cart{
-            height:60px;
-            width:60px;
-            margin-left: 190vh;
-            position: relative;
-            top:-120px;
-        }
-        .marq{
-            margin-top: -400px;
-        }
+        text-align: center;
+        padding: 10px;
+        margin-top: -420px;
+      }
+      .buds {
+        text-align: center;
+        margin-top: 30px;
+      }
+      #cart {
+        height: 60px;
+        width: 60px;
+        margin-left: 190vh;
+        position: relative;
+        top: -120px;
+      }
+      .marq {
+        margin-top: -400px;
+      }
     </style>
   </head>
   <body>
     <script>
-        var elements=[
+      var elements = [
         {
-                "productname":"Apple iPhone 15 Pro (256 GB) - Natural Titanium",
-                "image":"https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Oneplus Nord CE 3 5G (Grey Shimmer, 8GB RAM, 128GB Storage)",
-                "image":"https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Samsung Galaxy Z Fold5 5G (Cream, 12GB RAM, 512GB Storage)",
-                "image":"https://m.media-amazon.com/images/I/716pi7fRTpL._AC_UL480_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"OnePlus 11R 5G (Galactic Silver, 16GB RAM, 256GB Storage)",
-             "image":"https://m.media-amazon.com/images/I/613SAOPmLeL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Samsung Galaxy S23 FE 5G (Mint, 8GB, 256GB Storage)",
-                "image":"https://m.media-amazon.com/images/I/71qGismu6NL._AC_UL480_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)",
-                "image":"https://m.media-amazon.com/images/I/71XNeka-BRL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Samsung Galaxy Buds2 Pro, with Innovative AI Features,  (Bora Purple)",
-                "image":"https://m.media-amazon.com/images/I/61KVX-MbIUL._AC_UL480_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"OnePlus Nord Buds 2 TWS in Ear Earbuds with Mic",
-                "image":"https://m.media-amazon.com/images/I/61-ZYvldY+L._AC_UL480_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Noise Newly Launched Buds X Prime in-Ear Truly Wireless Earbuds",
-                "image":"https://m.media-amazon.com/images/I/61L6IGbElZL._AC_UL480_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"OnePlus Nord Buds 2 TWS in Ear Earbuds with Mic",
-                "image":"https://m.media-amazon.com/images/I/31E1QuiqROL._SX300_SY300_QL70_FMwebp_.jpg"
-            },
-            {
-                "productname":"Noise Newly Launched Buds X Prime in-Ear Truly Wireless Earbuds",
-                "image":"https://m.media-amazon.com/images/I/61bodEi+1JL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-            "productname":"JBL Live Pro 2 Premium in Ear Wireless TWS Earbuds",
-                "image":"https://m.media-amazon.com/images/I/51nxSegTJgL._AC_UY327_QL65_.jpg"
-            },
-            {
-                "productname":"Fujifilm Instax Mini 12 Instant Camera-BlueColor",
-                "image":"https://m.media-amazon.com/images/I/61erc7ly+ZL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fujifilm Instax Mini 12 Instant Camera-PinkColor",
-                "image":"https://m.media-amazon.com/images/I/61+5Ld-oc1L._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fujifilm Instax Mini 11 Instant Camera-(Lilac PurpleColour)",
-                "image":"https://m.media-amazon.com/images/I/713XBdb3P9L._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fujifilm Instax Mini 11 Instant Camera (Sky Blue)",
-                "image":"https://m.media-amazon.com/images/I/61PzfzkeGBL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fujifilm Instax Mini 11 Instant Camera (Ice White)",
-                "image":"https://m.media-amazon.com/images/I/71wQpCMAu5L._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fujifilm Instax Mini 12 Instant Camera ",
-                "image":"https://m.media-amazon.com/images/I/61bIMWrOxuL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fire-Boltt Ninja Call Pro Plus 1.83 Smart Watch with Bluetooth Calling",
-                "image":"https://m.media-amazon.com/images/I/61MsnMwSK7L._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Noise Pulse 2 Max 1.85 Display, Bluetooth Calling Smart Watch",
-                "image":"https://m.media-amazon.com/images/I/71Q8czKqSIL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Noise Pulse 2 Max 1.85 Display, Bluetooth Calling Smart Watch",
-                "image":"https://m.media-amazon.com/images/I/61V-uzan3wL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Fire-Boltt Phoenix Ultra Luxury Stainless Steel, Bluetooth Calling ",
-                "image":"https://m.media-amazon.com/images/I/71D7jU3tUUL._AC_UY327_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Amazfit GTS 4 Mini Smart Watch, Alexa Built-in Fitness Tracker",
-                "image":"https://m.media-amazon.com/images/I/51AcuSbW5JL._AC_UL480_FMwebp_QL65_.jpg"
-            },
-            {
-                "productname":"Apple Watch Series 9 [GPS 45mm] Smartwatch",
-                "image":"https://m.media-amazon.com/images/I/810wzMG3BJL._AC_UL480_FMwebp_QL65_.jpg"
-            }
-            
-        ]
-        var cardContainer = document.createElement("div");
-        var marq = document.createElement("marquee");
-    marq.setAttribute("class","marq")
-        marq.innerText = "Shop Now For Amazing Deals!Get up to 20% off on Electronics!Limited time offer! Hurry up!Explore our latest collection!";
-        marq.setAttribute("class", "move");
-        document.body.appendChild(marq);
+          productname: "Apple iPhone 15 Pro (256 GB) - Natural Titanium",
+          image:
+            "https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Oneplus Nord CE 3 5G (Grey Shimmer, 8GB RAM, 128GB Storage)",
+          image:
+            "https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Samsung Galaxy Z Fold5 5G (Cream, 12GB RAM, 512GB Storage)",
+          image:
+            "https://m.media-amazon.com/images/I/716pi7fRTpL._AC_UL480_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "OnePlus 11R 5G (Galactic Silver, 16GB RAM, 256GB Storage)",
+          image:
+            "https://m.media-amazon.com/images/I/613SAOPmLeL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "Samsung Galaxy S23 FE 5G (Mint, 8GB, 256GB Storage)",
+          image:
+            "https://m.media-amazon.com/images/I/71qGismu6NL._AC_UL480_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "OnePlus 12R (Iron Gray, 16GB RAM, 256GB Storage)",
+          image:
+            "https://m.media-amazon.com/images/I/71XNeka-BRL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Samsung Galaxy Buds2 Pro, with Innovative AI Features,  (Bora Purple)",
+          image:
+            "https://m.media-amazon.com/images/I/61KVX-MbIUL._AC_UL480_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "OnePlus Nord Buds 2 TWS in Ear Earbuds with Mic",
+          image:
+            "https://m.media-amazon.com/images/I/61-ZYvldY+L._AC_UL480_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Noise Newly Launched Buds X Prime in-Ear Truly Wireless Earbuds",
+          image:
+            "https://m.media-amazon.com/images/I/61L6IGbElZL._AC_UL480_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "OnePlus Nord Buds 2 TWS in Ear Earbuds with Mic",
+          image:
+            "https://m.media-amazon.com/images/I/31E1QuiqROL._SX300_SY300_QL70_FMwebp_.jpg",
+        },
+        {
+          productname:
+            "Noise Newly Launched Buds X Prime in-Ear Truly Wireless Earbuds",
+          image:
+            "https://m.media-amazon.com/images/I/61bodEi+1JL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "JBL Live Pro 2 Premium in Ear Wireless TWS Earbuds",
+          image:
+            "https://m.media-amazon.com/images/I/51nxSegTJgL._AC_UY327_QL65_.jpg",
+        },
+        {
+          productname: "Fujifilm Instax Mini 12 Instant Camera-BlueColor",
+          image:
+            "https://m.media-amazon.com/images/I/61erc7ly+ZL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "Fujifilm Instax Mini 12 Instant Camera-PinkColor",
+          image:
+            "https://m.media-amazon.com/images/I/61+5Ld-oc1L._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        // {
+        //   productname:
+        //     "Fujifilm Instax Mini 11 Instant Camera",
+        //   image:
+        //     "https://m.media-amazon.com/images/I/713XBdb3P9L._AC_UY327_FMwebp_QL65_.jpg",
+        // },
+        // {
+        //   productname: "Fujifilm Instax Mini 11 Instant Camera ",
+        //   image:
+        //     "https://m.media-amazon.com/images/I/61PzfzkeGBL._AC_UY327_FMwebp_QL65_.jpg",
+        // },
+        // {
+        //   productname: "Fujifilm Instax Mini 11 Instant Camera",
+        //   image:
+        //     "https://m.media-amazon.com/images/I/71wQpCMAu5L._AC_UY327_FMwebp_QL65_.jpg",
+        // },
+        {
+          productname: "Fujifilm Instax Mini 12 Instant Camera ",
+          image:
+            "https://m.media-amazon.com/images/I/61bIMWrOxuL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        // {
+        //   productname:
+        //     "Fire-Boltt Ninja Call Pro Plus 1.83 Smart Watch with Bluetooth Calling",
+        //   image:
+        //     "https://m.media-amazon.com/images/I/61MsnMwSK7L._AC_UY327_FMwebp_QL65_.jpg",
+        // },
+        {
+          productname:
+            "Noise Pulse 2 Max 1.85 Display, Bluetooth Calling Smart Watch",
+          image:
+            "https://m.media-amazon.com/images/I/71Q8czKqSIL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Noise Pulse 2 Max 1.85 Display, Bluetooth Calling Smart Watch",
+          image:
+            "https://m.media-amazon.com/images/I/61V-uzan3wL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Fire-Boltt Phoenix Ultra Luxury Stainless Steel, Bluetooth Calling ",
+          image:
+            "https://m.media-amazon.com/images/I/71D7jU3tUUL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Amazfit GTS 4 Mini Smart Watch, Alexa Built-in Fitness Tracker",
+          image:
+            "https://m.media-amazon.com/images/I/51AcuSbW5JL._AC_UL480_FMwebp_QL65_.jpg",
+        },
+        {
+          productname: "Apple Watch Series 9 [GPS 45mm] Smartwatch",
+          image:
+            "https://m.media-amazon.com/images/I/810wzMG3BJL._AC_UL480_FMwebp_QL65_.jpg",
+        },
+      ];
+      var cardContainer = document.createElement("div");
 
-        var logo=document.createElement("img")
-        logo.setAttribute("class","logo")
-        logo.setAttribute("src","./elec logo.png")
-        document.body.appendChild(logo)
+      var marq = document.createElement("marquee");
+      marq.setAttribute("class", "marq");
+      marq.innerText =
+        "Shop Now For Amazing Deals!Get up to 20% off on Electronics!Limited time offer! Hurry up!Explore our latest collection!";
+      marq.setAttribute("class", "move");
+      document.body.appendChild(marq);
 
-        var nav=document.createElement("nav")
+      var logo = document.createElement("img");
+      logo.setAttribute("class", "logo");
+      logo.setAttribute("src", "./elec logo.png");
+      document.body.appendChild(logo);
 
-        var navnames=document.createElement("p")
-        navnames.setAttribute("class","nav")
-        navnames.innerText= "   Phones Watches Camera Buds   "
-        document.body.appendChild(navnames)
+      var nav = document.createElement("nav");
 
-        var cart=document.createElement("img")
-        cart.setAttribute("id","cart")
-        cart.setAttribute("src","./cart.png")
-        document.body.appendChild(cart)
+      var navnames = document.createElement("p");
+      navnames.setAttribute("class", "nav");
+      navnames.innerText = "   Phones Watches Camera Buds   ";
+      document.body.appendChild(navnames);
 
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
+      var cart = document.createElement("img");
+      cart.setAttribute("id", "cart");
+      cart.setAttribute("src", "./cart.png");
+      document.body.appendChild(cart);
 
-    var card = document.createElement("div");
-    card.setAttribute("class", "card");
+      for (let i = 0; i < elements.length; i++) {
+    
 
-   var phone=document.createElement("h1");
-   phone.innerText="Phones";
+        var card = document.createElement("div");
+        card.setAttribute("class", "card");
 
-    var productname = document.createElement("h3");
-    productname.setAttribute("class","product")
-    productname.innerText = element.productname;
-    card.appendChild(productname);
+        var phone = document.createElement("h1");
+        phone.innerText = "Phones";
 
-    var img = document.createElement("img");
-    img.setAttribute("src", element.image); 
-        img.setAttribute("alt", element.productName);
-    card.appendChild(img);
+        var productname = document.createElement("h3");
+        productname.setAttribute("class", "product");
+        productname.innerText = elements[i].productname;
+        card.appendChild(productname);
 
-    var button= document.createElement("a");
-    button.innerText = "View"; 
-    button.setAttribute("href","./shop.html"); 
-    button.setAttribute("id","btn");
-    card.appendChild(button);
+        var img = document.createElement("img");
+        img.setAttribute("src", elements[i].image);
+        img.setAttribute("alt", elements[i].productname);
+        card.appendChild(img);
+
+        var button = document.createElement("a");
+        button.innerText = "View";
+        button.setAttribute("id", "btn");
+        card.appendChild(button);
+
+        var button1 = document.createElement("a");
+        button1.innerText = "Add to Cart";
+        button1.setAttribute("id", "btn1");
+        card.appendChild(button1);
+         
+
+    button.addEventListener("click",function(){
+      localStorage.setItem("productname",JSON.stringify(elements[i]))
+      window.location.assign("./index4.html")
+      console.log(elements[i])
+    })
+        button.addEventListener("click",function(){ 
+        localStorage.setItem("image",JSON.stringify(elements[i]))
+        window.location.assign("./index4.html")
+        console.log(elements[i])
+       } )
+
+       button1.addEventListener("click",()=>{
+        localStorage.setItem("image",JSON.stringify(elements[i]))
+        window.location.assign("./addtocart.html")
+        console.log(elements[i])
+       })
+       button1.addEventListener("click",()=>{
+        localStorage.setItem("productname",JSON.stringify(elements[i]))
+        window.location.assign("./addtocart.html")
+        console.log(elements[i])
+       })
 
 
-    cardContainer.appendChild(card);
-}
-document.body.appendChild(cardContainer);
 
+        cardContainer.appendChild(card);
+      }
+      document.body.appendChild(cardContainer);
     </script>
-
   </body>
 </html>

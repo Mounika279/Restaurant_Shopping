@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var elements=[
+        {
+          productname: "Apple iPhone 15 Pro (256 GB) - Natural Titanium",
+          image:
+          "https://m.media-amazon.com/images/I/61V-uzan3wL._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        {
+          productname:
+            "Oneplus Nord CE 3 5G (Grey Shimmer, 8GB RAM, 128GB Storage)",
+          image:
+            "https://m.media-amazon.com/images/I/61abLrCfF7L._AC_UY327_FMwebp_QL65_.jpg",
+        },
+        ];
+        var cardContainer = document.createElement("div");
+        for (let i = 0; i < elements.length; i++) {
+        // var  = elements[i];
+
+        var card = document.createElement("div");
+        card.setAttribute("class", "card");
+
+        var productname = document.createElement("h3");
+        productname.setAttribute("class", "product");
+        productname.innerText = elements[i].productname;
+        card.appendChild(productname);
+
+        var img = document.createElement("img");
+        img.setAttribute("src", elements[i].image);
+        img.setAttribute("alt", elements[i].image);
+        card.appendChild(img);
+
+        var button = document.createElement("button");
+        button.innerText = "View";
+        button.setAttribute("id", "btn");
+        card.appendChild(button); 
+        var button1 = document.createElement("button");
+        button1.innerText = "addtocart";
+        button1.setAttribute("id", "btn1");
+        card.appendChild(button1);
+
+
+
+      button.addEventListener("click",()=>{
+        localStorage.setItem("image",JSON.stringify(elements[i]))
+        window.location.assign("./index7.html")
+        console.log(elements[i])
+      })
+      button1.addEventListener("click",()=>{
+        localStorage.setItem("productname",JSON.stringify(elements[i]))
+        windows.location.assign("./index7.html")
+        console.log(elements[i])
+      })
+
+
+
+
+        cardContainer.appendChild(card);
+      }
+      document.body.appendChild(cardContainer);
+    </script>
+</body>
+</html>

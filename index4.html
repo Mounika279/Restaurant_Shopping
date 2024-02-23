@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Page</title>
+    <style>
+        body{
+            font-family:'Times New Roman', Times, serif
+        }
+     
+        
+        h3{
+            text-align: center;
+            margin-top: 130px;
+            cursor:pointer;
+            font-size: larger;
+
+
+        }
+        img{
+            height: 300px;
+            width:250px;
+        border-radius: 15px;
+        padding: 15px;
+          margin-left: 600px;
+        }
+        #btn{
+            border: 1px solid slateblue;
+            position: relative; 
+            left:-180px;  
+            top:30px;
+        font-size: larger;
+        width: 80px;
+        height: 40px;
+        border-radius: 3px;
+        color: slateblue;
+        padding: 5px; 
+        text-decoration: none;
+      
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h3 id="productname"></h3>
+    <img src="" alt="img">
+
+    <script>
+        
+        var imgg = document.getElementsByTagName("img");
+        var img = localStorage.getItem("image");
+        var a = JSON.parse(img);
+        imgg[0].setAttribute("src", a["image"]);
+
+        var h33 = document.getElementsByTagName("h3"); 
+        var h3 = localStorage.getItem("productname");
+        var b = JSON.parse(h3);
+        h33[0].textContent = b["productname"]; 
+
+        var button = document.createElement("a");
+        button.innerText = "Go back";
+        button.setAttribute("id", "btn");
+        button.setAttribute("target", "_self"); 
+        button.href = "./shopping.html"; 
+        document.body.appendChild(button);
+    </script>
+</body>
+</html>

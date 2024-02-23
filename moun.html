@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var elements=[
+      {
+        id:1,
+        productname:"Mounika",
+        Image:"https://m.media-amazon.com/images/I/41YvjAcEc3L._MCnd_AC_.jpg"
+      },
+      {
+        id:1,
+        productname:"Mounika",
+        Image:"https://m.media-amazon.com/images/I/41YvjAcEc3L._MCnd_AC_.jpg"
+      }
+    ]
+   var divv= document.createElement("div")
+   document.body.appendChild(divv)
+   
+for(var i=0;i<elements.length;i++){
+   var h3=document.createElement("h3")
+   h3.innerText=elements[i].id
+   document.body.appendChild(h3)
+
+   var h4=document.createElement("h4")
+   h4.innerText=elements[i].productname
+   document.body.appendChild(h4)
+
+
+}
+  </script>
+</body>
+</html>
